@@ -7,3 +7,5 @@ while true; do ./automate.sh; done
 # Trick 2: use a list
 cat userdata/list.txt | grep -v ^$ | while read l; do openurl_reader_savepdf.txt.scpt "$l"; done
 
+# Trick 2 bis - dont do it twice
+touch userdata/dejavu.txt; cat userdata/bmk2.notroot.txt | grep -vFf userdata/dejavu.txt | grep -v ^$ | while read l; do openurl_reader_savepdf.txt.scpt "$l"; echo "$l" >> userdata/dejavu.txt; done
