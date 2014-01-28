@@ -11,4 +11,4 @@ read url
 if [ ! -z "$url" ]; then
 	osascript openurl_reader_savepdf.txt.scpt "$url"
 fi
-
+ls -Flah "$pdfdir"

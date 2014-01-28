@@ -28,8 +28,9 @@ on run argv
 	tell application "System Events" to tell process "Safari"
 		
 		-- reader
-		keystroke "R" using command down
 		delay 2
+		keystroke "R" using command down
+		delay 3
 		-- bring up the print dialog
 		keystroke "p" using command down
 		delay 1
