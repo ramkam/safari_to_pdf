@@ -4,3 +4,6 @@ http://macscripter.net/viewtopic.php?id=35560
 # Trick : 
 while true; do ./automate.sh; done
 
+# Trick 2: use a list
+cat userdata/list.txt | grep -v ^$ | while read l; do openurl_reader_savepdf.txt.scpt "$l"; done
+
