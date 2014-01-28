@@ -1,0 +1,29 @@
+# Everything usefull
+select url from bookmarks
+where url like "http%"
+and not url like "http://192.168%"
+group by url
+order by url
+
+# Everything that is a root dir
+select url from bookmarks
+where url like "http%"
+and not url like "http://192.168%"
+and (
+	(url like "%/" and LENGTH(url) - LENGTH(REPLACE(url, '/', '')) < 4)
+	or
+	(LENGTH(url) - LENGTH(REPLACE(url, '/', '')) < 3)
+	)
+group by url
+order by url
+
+# Everything that is not a root dir
+select url from bookmarks
+where url like "http%"
+and not url like "http://192.168%"
+and url like "%/"
+and LENGTH(url) - LENGTH(REPLACE(url, '/', '')) < 4
+group by url
+order by url
+
+
