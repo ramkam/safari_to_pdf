@@ -8,5 +8,7 @@ pdfdir=/Users/RK/Dropbox/Safari\ To\ Pdf
 
 echo "The url ?"
 read url
-osascript openurl_reader_savepdf.txt.scpt "$url"
+if [ ! -z "$url" ]; then
+	osascript openurl_reader_savepdf.txt.scpt "$url"
+fi
 
