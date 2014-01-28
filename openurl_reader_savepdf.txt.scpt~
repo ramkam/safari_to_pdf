@@ -20,11 +20,11 @@ on run argv
 		make new document at end of documents
 		set URL of document 1 to zeURL #"http://www.lemonde.fr/"
 		
-		## that's not really working
+		-- that's not really working
 		#repeat until ((do JavaScript "document.readyState" in front document) is "complete")
 		#	delay 1
 		#end repeat
-		delay 5
+		sleep 8
 	end tell
 	
 	tell application "System Events" to tell process "Safari"
