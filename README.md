@@ -15,6 +15,10 @@ Bugs sometime :
 
  * The name is not collected in the save dialog => no save
  * Safari crashes (long document)=> sometimes it saves
+ * Non Html dont behave the same
+ * pdf files can have a blank name
+ * some titles start with a . => error message shows up
+ * allow to put custom file name (cf. batch)
  
 Files in 2 formats : 
 
